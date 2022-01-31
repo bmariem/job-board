@@ -1,38 +1,161 @@
-.App {
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 100px;
+  background: #333;
+}
+
+header h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
   text-align: center;
+  color: #fff;
+  padding: 27px 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  margin: 60px auto;
+  max-width: 1020px;
+  max-height: 1020px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 1024px) {
+  main {
+    margin: 60px 30px;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    gap: 30px;
+    justify-content: space-between;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width: 768px) {
+  main {
+    margin: 60px 30px;
+    overflow: hidden;
+    height: auto;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    gap: 30px;
+    justify-content: flex-start;
+  }
+}
+
+.job {
+  border: 10px solid;
+  width: 300px;
+  height: 300px;
+  padding: 15px;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.job:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px) {
+  .job {
+    min-width: 300px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 425px) {
+  .job {
+    min-width: 250px;
   }
+}
+
+.border-red {
+  border-color: #e30413;
+}
+
+.border-green {
+  border-color: #3ea535;
+}
+
+.border-yellow {
+  border-color: #ffee00;
+}
+
+.border-blue {
+  border-color: #039fe3;
+}
+.border-pink {
+  border-color: #f8c5af;
+}
+
+.job h2 {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #000000;
+}
+
+.job p {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+footer {
+  height: 63px;
+  background: #dddddd;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: auto;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+footer p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+  padding: 22px 0;
+}
+
+footer p a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+  margin: 0 0 0 5px;
 }
