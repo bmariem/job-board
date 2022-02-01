@@ -1,7 +1,8 @@
 const Job = (props) => {
   return (
     <div className={`job border-${props.className}`}>
-      <h2>{props.title}</h2>
+      {/* IF TRUE */}
+      {props.title && <h2>{props.title}</h2>}
       <p>
         {props.contractType} - {props.country} - {props.city}
       </p>
